@@ -1,0 +1,221 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(../images/background-blue.jpg);
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "hero hero hero hero"
+    "services services services services"
+    "projects projects projects projects"
+    "footer footer footer footer";
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 1.6rem;
+}
+
+.header {
+  grid-area: header;
+  background-color: #fff;
+}
+
+.header .header-container {
+  display: flex;
+  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 75px;
+  background-image: url(../images/background-blue.jpg);
+}
+
+.header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.header a:hover h1 {
+  color: coral;
+}
+
+.hero {
+  grid-area: hero;
+  height: 90vh;
+  background: url("../images/capa-moda.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 5vh;
+  font-family: "Corinthia", cursive;
+  color: #fff;
+}
+
+.hero h4 {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10vh;
+  font-family: "Courgette", cursive;
+  color: #fff;
+  text-align: center;
+}
+
+.hero:after {
+  content: url("../images/seta_preta.png");
+  height: 35px;
+  bottom: 40px;
+  position: absolute;
+  animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes downarrow {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(0.4em);
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 478px) {
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .hero h4 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects {
+  grid-area: projects;
+  display: grid;
+  height: 100%;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.projects img {
+  width: 110vh;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.projects a:hover img {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4);
+  }
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.footer h4 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer h3 {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer .contato {
+  font-size: 3rem;
+  color: #fff;
+  padding: 5px;
+}
+
+.footer .contato:hover {
+  color: coral;
+}
+
+.footer nav {
+  margin: 50px 0;
+}
+
+.footer nav ul {
+  display: flex;
+  justify-content: center;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.footer nav ul li a {
+  font-weight: 500;
+  font-size: 2.8rem;
+  margin: 20px;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.footer nav ul li a:hover {
+  font-weight: 700;
+  color: coral;
+}
+
+.footer .social i {
+  color: #fff;
+  font-size: 4rem;
+  transition: 0.3s;
+}
+
+.footer .social i:hover {
+  color: coral;
+}
+
+.footer {
+  background-image: url(../images/background-blue.jpg);
+}
+
+.footer .social a {
+  margin: 20px;
+}
+
+@media (max-width: 980px) {
+  .hero h2 {
+    font-size: 10vh;
+  }
+}
